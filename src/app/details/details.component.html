@@ -1,0 +1,46 @@
+	
+<div class="row body">
+		<div class="col-lg-4 col-md-2 col-sm-1"></div>
+
+		<div class="col-lg-4 col-md-8 col-sm-10 mt-5">
+			<h2 class="text-center"><i>Student Details</i></h2>
+			<br>
+			<form #myForm='ngForm' name="myForm" (ngSubmit)='sendData(myForm.value)'>
+				<div class="form-group">
+		      		<label for="name"><b>Name:</b></label><br>
+					<input #name='ngModel' ngModel  name="name" type="text" placeholder="Name" class="form-control" />
+		    	</div>
+			
+		    	<div class="form-group">
+		      			<label for="name"><b>Email:</b></label><br>
+						<input id="email" #email='ngModel' ngModel name="email" type="text" placeholder="Email" class="form-control" />
+		    	</div>
+			
+		    	<div class="form-group">
+		      		<label for="name"><b>Gender:</b></label><br>
+		    		<select class="form-control" id="gender" name="gender" #gender='ngModel' ngModel>
+						<option  value="Select">Select</option>
+						<option value="Male">Male</option>
+					    <option value="Female">Female</option>
+						<option value="Other">Others</option>
+					</select>
+		    	</div>
+
+				<div class="form-group">
+		      			<label for="name"><b>Age:</b></label><br>
+						<input id="age" name="age" #age='ngModel' ngModel type="number" placeholder="Age" class="form-control" />
+		    	</div>
+
+				<div class="form-group">
+		      			<label for="name"><b>Adhaar No:</b></label><br>
+						<input id="adhaar" #adhaar='ngModel' ngModel name="adhaar" type="number" placeholder="Adhaar No" class="form-control " />
+		    	</div>
+				<div class="form-group">
+					<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+						<a routerLink="/header/database"><input type="submit" class="btn btn-info" value="submit" id="signup_form"></a>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="col-lg-4 col-md-2 col-sm-1"></div>
+	</div>
